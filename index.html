@@ -1,0 +1,366 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Tree of Life</title>
+  <meta name="description" content="Interactive Tree of Life">
+  <meta name="author" content="Lex_Rex">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- JAVASCRIPT FUNCTIONS -->
+  <script type="text/javascript">
+  var toggle_visibility = (function(){
+   function toggle(cl){
+       var els = document.getElementsByClassName(cl);
+       for(var i=0; i<els.length; ++i){
+          var s = els[i].style;
+          s.display = s.display==='block' ? 'none' : 'block';
+       };
+   }
+   return function(cl){
+      if(cl instanceof Array){
+         for(var i=0; i<cl.length; ++i){
+            toggle(cl[i]);
+         }
+      }else{
+         toggle(cl);
+      }
+   };
+  })();
+  
+    var hide_visibility = (function(){
+   function toggle(cl){
+       var els = document.getElementsByClassName(cl);
+       for(var i=0; i<els.length; ++i){
+          var s = els[i].style;
+          s.display = s.display==='none' ? 'none' : 'none';
+       };
+   }
+   return function(cl){
+      if(cl instanceof Array){
+         for(var i=0; i<cl.length; ++i){
+            toggle(cl[i]);
+         }
+      }else{
+         toggle(cl);
+      }
+   };
+  })();
+  </script>
+  <!-- JAVASCRIPT FUNCTIONS -->
+  
+</head>
+
+<body>
+	
+	<!-- NAVIGATION MENU -->
+	<nav>
+		<ul>
+			<li><a href="#" onclick="hide_visibility([''triads','triads_sephira',kircher_hebrew','path_numbering','man', 'pillars_bj', 'polarity', 'plane', 'hebrew', 'planets', 'english', 'flash', 'number']);">Hide All</a></li>
+		</ul>	
+		<h3>General</h3>
+		<ul>
+			<li><a href="#" onclick="toggle_visibility(['triads','triads_sephira']);hide_visibility('flash');">Three Triads</a></li>
+			<li><a href="#" onclick="toggle_visibility('man');">Man</a></li>
+			<li><a href="#" onclick="toggle_visibility('plane');">Planes</a></li>
+			<li><a href="#" onclick="toggle_visibility('polarity');">Polarity</a></li>
+			<li><a href="#" onclick="toggle_visibility('pillars_bj');">Boaz & Jachin</a></li>
+			
+		</ul>	
+		<h3>Sephiroth</h3>
+		<ul>
+			<li><a href="#" onclick="toggle_visibility('number');">Numbering</a></li>
+			<li><a href="#" onclick="toggle_visibility('hebrew');hide_visibility(['english','planets']);">Hebrew</a></li>
+			<li><a href="#" onclick="toggle_visibility('english');hide_visibility(['hebrew','planets']);">English</a></li>
+			<li><a href="#" onclick="toggle_visibility('planets');hide_visibility(['english','hebrew']);">Planets</a></li>
+			<li><a href="#" onclick="toggle_visibility('gd_color');">GD Colors</a></li>
+		</ul>		
+		<h3>Paths</h3>
+		<ul>
+			<li><a href="#" onclick="toggle_visibility('flash');hide_visibility(['triads','triads_sephira']);">Flash</a></li>
+			<li><a href="#" onclick="toggle_visibility('path_numbering');hide_visibility(['kircher_hebrew']);">Numbering</a></li>
+			<li><a href="#" onclick="toggle_visibility('kircher_hebrew');hide_visibility(['path_numbering'])">Kircher Hebrew</a></li>
+			<li><a href="#">Tarot *</a></li>
+		</ul>
+	</nav>
+	<!-- NAVIGATION MENU -->
+	
+	<!-- WRAPPER -->
+	<div id="wrapper">	
+		<img class="man" src ="man.svg"/>	
+		
+		<div id="planes">
+			<div id="atziluth" class="plane"><p>Atziluth (י)<p></div>
+			<div id="briah" class="plane"><p>Briah (ה)</p></div>
+			<div id="yetzirah" class="plane"><p>Yetzirah (ו)</p></div>
+			<div id="assiah" class="plane"><p>Assiah (ה)</p></div>
+		</div>		
+		
+		<div id="pillarlayers">
+			<div id="boaz" class="pillars_bj"><p>Boaz</p></div>
+			<div id="jachin" class="pillars_bj"><p>Jachin</p></div>
+		</div>		
+		
+		<!-- PILLAR OF SEVERITY -->
+		<div id="pillar_severity"  class="pillar">
+			<h1 class="polarity" style="color:red;">+</h1>
+	
+			<div id="binah" class="sephira"></div>
+			<div id="geburah" class="sephira"></div>
+			<div id="hod" class="sephira"></div>
+	
+			<!-- SEPHIROTH -->
+			<div id="binah" class="sephira">
+				<p class ="number">3</p>
+				<div class="hebrew">Binah<br/>בינה</div>
+				<div class="english" >Under- </br>standing</div>
+				<div class="planets">Saturn <br/>♄</div>
+			</div>			
+			<div id="geburah" class="sephira">
+				<p class ="number">5</p>
+				<div class="hebrew">Gevurah<br/>גבורה</div>
+				<div class="english">Severity</div>
+				<div class="planets">Mars<br/>♂</div>
+			</div>			
+			<div id="hod" class="sephira">
+				<p class ="number">8</p>
+				<div class="hebrew">Hod<br/>הוד</div>
+				<div class="english">Splendor</div>
+				<div class="planets">Mercury<br/>☿</div>
+			</div>	
+			<!-- / SEPHIROTH -->
+			
+			<!-- PATHS -->
+			<div id="path_12" class="path">
+				<p class="kircher_hebrew">ב‎‎</p>
+				<p class="path_numbering">12‎‎</p>
+			</div>
+			<div id="path_18" class="path">
+				<p class="kircher_hebrew">ח‎</p>				
+				<p class="path_numbering">18‎‎</p>
+			</div>
+			<div id="path_21" class="path">
+				<p class="kircher_hebrew">ל‎</p>				
+				<p class="path_numbering">‎‎21</p>
+			</div>			
+			<div id="path_23" class="path">
+				<p class="kircher_hebrew">מ‎‎</p>
+				<p class="path_numbering">‎‎23</p>
+			</div>
+			<div id="path_26" class="path">
+				<p class="kircher_hebrew">ע‎</p>
+				<p class="path_numbering">‎‎26</p>
+			</div>		
+			<div id="path_30" class="path">
+				<p class="kircher_hebrew">ר‎‎</p>
+				<p class="path_numbering">‎‎30</p>
+			</div>
+			<div id="path_31" class="path">
+				<p class="kircher_hebrew">ש</p>
+				<p class="path_numbering">‎‎31</p>
+			</div>
+			<!-- /PATHS -->
+			
+			<!-- GD Colors-->
+			<div id="binah" class="gd_color"></div>			
+			<div id="geburah" class="gd_color"></div>			
+			<div id="hod" class="gd_color"></div>
+			<!-- / GD Colors-->
+			
+			<!-- Three Triads-->
+			<div id="binah" class="triads_sephira"></div>			
+			<div id="geburah" class="triads_sephira"></div>			
+			<div id="hod" class="triads_sephira"></div>	
+			<div id="path_12" class="triads"></div>
+			<div id="path_21" class="triads"></div>
+			<div id="path_30" class="triads"></div>
+			<!-- / Three Triads-->
+			
+			<!--  LIGHTNING FLASH PATHS -->
+			<div id="path_21" class="flash"></div>
+			<div id="path_30" class="flash"></div>
+			<!--  /LIGHTNING FLASH PATHS -->			
+		
+		</div>
+		<!-- PILLAR OF SEVERITY -->
+		
+		<!-- PILLAR OF MILDNESS -->		
+		<div id="pillar_mildness" class="pillar">					
+			
+			<!-- SEPHIROTH -->
+			<div id="kether" class="sephira">
+				<p class ="number">1</p>
+				<div class="hebrew">Keter<br/>כֶּתֶר‎</div>
+				<div class="english">Crown</div>
+				<div class="planets">Source<br/>✡</div>
+			</div>
+			<div id="daath" class="sephira">
+				<div class="hebrew">Da'at<br/>דעת</div>
+				<div class="english">Wisdom</div>
+			</div>
+			<div id="tiphareth" class="sephira">
+				<p class ="number">6</p>
+				<div class="hebrew">Tif'eret<br/>תפארת</div>
+				<div class="english">Beauty</div>
+				<div class="planets">Sun</br>☉</div>
+			</div>
+			<div id="yesod" class="sephira">
+				<p class ="number">9</p>
+				<div class="hebrew">Yesod<br/>יסוד</div>
+				<div class="english">Foundation</div>
+				<div class="planets">Moon<br/>☽</div>
+			</div>	
+			<div id="malkuth" class="sephira">
+				<p class ="number">10</p>
+				<div class="hebrew">Malkhut<br/>מלכות</div>
+				<div class="english">Kingdom</div>
+				<div class="planets">Earth<br/>⊕</div>
+			</div>
+			<!-- / SEPHIROTH -->
+			
+			<!-- PATHS -->
+			<div id="path_13" class="path">
+				<p class="kircher_hebrew">ג‎</p>
+				<p class="path_numbering">13</p>
+			</div>
+			<div id="path_15" class="path">
+				<p class="kircher_hebrew">ה</p>
+				<p class="path_numbering">15</p>
+			</div>
+			<div id="path_14" class="path">
+				<p class="kircher_hebrew">ד‎</p>
+				<p class="path_numbering">14</p>
+			</div>		
+			<div id="path_17" class="path">
+				<p class="kircher_hebrew">ז‎‎</p>
+				<p class="path_numbering">17</p>
+			</div>			
+						
+			<div id="path_19" class="path">
+				<p class="kircher_hebrew">ט</p>
+				<p class="path_numbering">19</p>
+			</div>
+			<div id="path_25" class="path">
+				<p class="kircher_hebrew">ם</p>
+				<p class="path_numbering">25</p>
+			</div>
+			<div id="path_27" class="path">
+				<p class="kircher_hebrew">ח</p>
+				<p class="path_numbering">27</p>
+			</div>			
+			<div id="path_32" class="path">
+				<p class="kircher_hebrew">ח</p>
+				<p class="path_numbering">32</p>
+			</div>			
+			<!-- /PATHS -->
+			
+			<!-- GD Colors-->
+			<div id="kether" class="gd_color"></div>
+			<div id="tiphareth" class="gd_color"></div>
+			<div id="yesod" class="gd_color"></div>
+			<!-- / GD Colors-->
+			
+			<!-- Three Triads-->
+			<div id="kether" class="triads_sephira"><p id="yehida" class="level">Yehida</p></div>
+			<div id="tiphareth" class="triads_sephira"><p id="neshama" class="level">Neshama</p></div>
+			<div id="yesod" class="triads_sephira"><p id="ruach" class="level">Ruach</p></div>
+			<div id="malkuth" class="triads_sephira"><p id="nefesh" class="level">Nefesh</p></div>
+			<div id="path_14" class="triads"></div>
+			<div id="path_19" class="triads"></div>
+			<div id="path_27" class="triads"></div>
+			<!-- / Three Triads-->
+			
+			<!--  LIGHTNING FLASH PATHS -->
+			<div id="path_14" class="flash"></div>			
+			<div id="path_abbyss" class="flash"></div>
+			<div id="path_19" class="flash"></div>
+			<div id="path_27" class="flash"></div>
+			<div id="path_32" class="flash"></div>
+			<!-- / LIGHTNING FLASH PATHS -->
+
+
+		</div>
+		<!-- PILLAR OF MILDNESS -->
+		
+		<!-- PILLAR OF MERCY -->
+		<div id="pillar_mercy"  class="pillar">
+			<h1 class="polarity" style="color:blue;left:-215px;">-</h1>
+			<div id="chokmah" class="sephira">
+				<p class ="number">2</p>
+				<div class="hebrew">Chokmah<br/>חכמה</div>
+				<div class="english">Wisdom</div>
+				<div class="planets">Zodiac<br/>⛤</div>
+			</div>
+			<div id="chesed" class="sephira">
+				<p class ="number">4</p>
+				<div class="hebrew">Chesed<br/>חסד</div>
+				<div class="english">Mercy</div>
+				<div class="planets">Jupiter<br/>♃</div>
+			</div>
+			<div id="netzach" class="sephira">
+				<p class ="number">7</p>
+				<div class="hebrew">Netzach<br/>נצח</div>
+				<div class="english">Victory</div>
+				<div class="planets">Venus<br/>♀</div>
+			</div>			
+			
+			<!-- PATHS -->
+			<div id="path_11" class="path">
+				<p class="kircher_hebrew">א</p>
+				<p class="path_numbering">11</p>
+			</div>			
+			<div id="path_16" class="path">
+				<p class="kircher_hebrew">ו‎</p>
+				<p class="path_numbering">16</p>
+			</div>
+			<div id="path_20" class="path">
+				<p class="kircher_hebrew">י‎</p>
+				<p class="path_numbering">20</p>
+			</div>
+			<div id="path_22" class="path">
+				<p class="kircher_hebrew">ב‎</p>
+				<p class="path_numbering">22</p>
+			</div>
+			<div id="path_24" class="path">
+				<p class="kircher_hebrew">נ‎</p>
+				<p class="path_numbering">24</p>
+			</div>			
+			<div id="path_28" class="path">
+				<p class="kircher_hebrew">צ‎</p>
+				<p class="path_numbering">28</p>
+			</div>
+			<div id="path_29" class="path">
+				<p class="kircher_hebrew">ק‎‎</p>
+				<p class="path_numbering">29</p>
+			</div>
+			<!-- /PATHS -->
+			
+			<!-- GD Colors-->
+			<div id="chokmah" class="gd_color"></div>
+			<div id="chesed" class="gd_color"></div>
+			<div id="netzach" class="gd_color"></div>
+			<!-- / GD Colors-->
+			
+			<!-- Three Triads-->
+			<div id="chokmah" class="triads_sephira"></div>
+			<div id="chesed" class="triads_sephira"></div>
+			<div id="netzach" class="triads_sephira"></div>
+			
+			<div id="path_11" class="triads"></div>
+			<div id="path_28" class="triads"></div>
+			<div id="path_20" class="triads"></div>
+			<!-- / Three Triads-->
+			
+			<!--  LIGHTNING FLASH PATHS -->
+			<div id="path_11" class="flash"></div>
+			<div id="path_24" class="flash"></div>
+			<!-- / LIGHTNING FLASH PATHS -->
+			
+		</div>
+		<!-- PILLAR OF MERCY -->
+	</div>
+	<!-- WRAPPER -->
+	
+</body>
+</html>
