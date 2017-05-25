@@ -79,22 +79,22 @@
 		<h3>Paths</h3>
 		<ul>
 			<li><a href="#" onclick="toggle_visibility('flash');hide_visibility(['triads','triads_sephira']);">Flash</a></li>
-			<li><a href="#" onclick="toggle_visibility('path_numbering');hide_visibility(['kircher_hebrew']);">Numbering</a></li>
-			<li><a href="#" onclick="toggle_visibility('kircher_hebrew');hide_visibility(['path_numbering'])">Kircher Hebrew</a></li>
-			<li><a href="#">Tarot *</a></li>
+			<li><a href="#" onclick="toggle_visibility('path_numbering');hide_visibility(['kircher_hebrew','tarot']);">Numbering</a></li>
+			<li><a href="#" onclick="toggle_visibility('kircher_hebrew');hide_visibility(['path_numbering','tarot'])">Kircher Hebrew</a></li>
+			<li><a href="#" ><!-- onclick="toggle_visibility('tarot');hide_visibility(['kircher_hebrew','path_numbering']);" --> Tarot *</a></li>
 		</ul>
 	</nav>
 	<!-- NAVIGATION MENU -->
 	
 	<!-- WRAPPER -->
 	<div id="wrapper">	
-		<img class="man" src ="man.svg"/>	
+		<img class="man" src ="img/man.svg"/>	
 		
 		<div id="planes">
-			<div id="atziluth" class="plane"><p>Atziluth (י)<p></div>
-			<div id="briah" class="plane"><p>Briah (ה)</p></div>
-			<div id="yetzirah" class="plane"><p>Yetzirah (ו)</p></div>
-			<div id="assiah" class="plane"><p>Assiah (ה)</p></div>
+			<div id="atziluth" class="plane"><p>Atziluth (<span class="times">י</span>)</p></div>
+			<div id="briah" class="plane"><p>Briah (<span class="times">ה</span>)</p></div>
+			<div id="yetzirah" class="plane"><p>Yetzirah (<span class="times">ו</span>)</p></div>
+			<div id="assiah" class="plane"><p>Assiah (<span class="times">ה</span>)</p></div>
 		</div>		
 		
 		<div id="pillarlayers">
@@ -113,19 +113,19 @@
 			<!-- SEPHIROTH -->
 			<div id="binah" class="sephira">
 				<p class ="number">3</p>
-				<div class="hebrew">Binah<br/>בינה</div>
+				<div class="hebrew">Binah<br/><span class="times">בינה</span></div>
 				<div class="english" >Under- </br>standing</div>
 				<div class="planets">Saturn <br/>♄</div>
 			</div>			
 			<div id="geburah" class="sephira">
 				<p class ="number">5</p>
-				<div class="hebrew">Gevurah<br/>גבורה</div>
+				<div class="hebrew">Gevurah<br/><span class="times">גבורה</span></div>
 				<div class="english">Severity</div>
 				<div class="planets">Mars<br/>♂</div>
 			</div>			
 			<div id="hod" class="sephira">
 				<p class ="number">8</p>
-				<div class="hebrew">Hod<br/>הוד</div>
+				<div class="hebrew">Hod<br/><span class="times">הוד</span></div>
 				<div class="english">Splendor</div>
 				<div class="planets">Mercury<br/>☿</div>
 			</div>	
@@ -135,30 +135,37 @@
 			<div id="path_12" class="path">
 				<p class="kircher_hebrew">ב‎‎</p>
 				<p class="path_numbering">12‎‎</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/01_trumps_magician.gif">‎‎</p>
 			</div>
 			<div id="path_18" class="path">
 				<p class="kircher_hebrew">ח‎</p>				
-				<p class="path_numbering">18‎‎</p>
+				<p class="path_numbering">18‎‎</p>				
+				<p><img class="tarot" src="img/tarot_riderwaite/07_trumps_chariot.gif">‎‎</p>
 			</div>
 			<div id="path_21" class="path">
 				<p class="kircher_hebrew">ל‎</p>				
 				<p class="path_numbering">‎‎21</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/10_trumps_wheeloffortune.gif">‎‎</p>
 			</div>			
 			<div id="path_23" class="path">
 				<p class="kircher_hebrew">מ‎‎</p>
 				<p class="path_numbering">‎‎23</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/12_trumps_hangedman.gif">‎‎</p>
 			</div>
 			<div id="path_26" class="path">
 				<p class="kircher_hebrew">ע‎</p>
 				<p class="path_numbering">‎‎26</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/15_trumps_devil.gif">‎‎</p>
 			</div>		
 			<div id="path_30" class="path">
 				<p class="kircher_hebrew">ר‎‎</p>
 				<p class="path_numbering">‎‎30</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/19_trumps_sun.gif">‎‎</p>
 			</div>
 			<div id="path_31" class="path">
 				<p class="kircher_hebrew">ש</p>
 				<p class="path_numbering">‎‎31</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/20_trumps_judgement.gif">‎‎</p>
 			</div>
 			<!-- /PATHS -->
 			
@@ -191,29 +198,29 @@
 			<!-- SEPHIROTH -->
 			<div id="kether" class="sephira">
 				<p class ="number">1</p>
-				<div class="hebrew">Keter<br/>כֶּתֶר‎</div>
+				<div class="hebrew">Keter<br/><span class="times">כֶּתֶר‎</span></div>
 				<div class="english">Crown</div>
 				<div class="planets">Source<br/>✡</div>
 			</div>
 			<div id="daath" class="sephira">
-				<div class="hebrew">Da'at<br/>דעת</div>
+				<div class="hebrew">Da'at<br/><span class="times">דעת</span></div>
 				<div class="english">Wisdom</div>
 			</div>
 			<div id="tiphareth" class="sephira">
 				<p class ="number">6</p>
-				<div class="hebrew">Tif'eret<br/>תפארת</div>
+				<div class="hebrew">Tif'eret<br/><span class="times">תפארת</span></div>
 				<div class="english">Beauty</div>
 				<div class="planets">Sun</br>☉</div>
 			</div>
 			<div id="yesod" class="sephira">
 				<p class ="number">9</p>
-				<div class="hebrew">Yesod<br/>יסוד</div>
+				<div class="hebrew">Yesod<br/><span class="times">יסוד</span></div>
 				<div class="english">Foundation</div>
 				<div class="planets">Moon<br/>☽</div>
 			</div>	
 			<div id="malkuth" class="sephira">
 				<p class ="number">10</p>
-				<div class="hebrew">Malkhut<br/>מלכות</div>
+				<div class="hebrew">Malkhut<br/><span class="times">מלכות</span></div>
 				<div class="english">Kingdom</div>
 				<div class="planets">Earth<br/>⊕</div>
 			</div>
@@ -223,35 +230,42 @@
 			<div id="path_13" class="path">
 				<p class="kircher_hebrew">ג‎</p>
 				<p class="path_numbering">13</p>
-			</div>
-			<div id="path_15" class="path">
-				<p class="kircher_hebrew">ה</p>
-				<p class="path_numbering">15</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/02_trumps_highpriestess.gif">‎‎</p>
 			</div>
 			<div id="path_14" class="path">
 				<p class="kircher_hebrew">ד‎</p>
 				<p class="path_numbering">14</p>
-			</div>		
+				<p><img class="tarot" src="img/tarot_riderwaite/03_trumps_empress.gif">‎‎</p>
+			</div>	
+			<div id="path_15" class="path">
+				<p class="kircher_hebrew">ה</p>
+				<p class="path_numbering">15</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/04_trumps_emperor.gif">‎‎</p>
+			</div>				
 			<div id="path_17" class="path">
 				<p class="kircher_hebrew">ז‎‎</p>
 				<p class="path_numbering">17</p>
-			</div>			
-						
+				<p><img class="tarot" src="img/tarot_riderwaite/06_trumps_lovers.gif">‎‎</p>
+			</div>									
 			<div id="path_19" class="path">
 				<p class="kircher_hebrew">ט</p>
 				<p class="path_numbering">19</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/08_trumps_strength.gif">‎‎</p>
 			</div>
 			<div id="path_25" class="path">
 				<p class="kircher_hebrew">ם</p>
 				<p class="path_numbering">25</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/14_trumps_temperance.gif">‎‎</p>
 			</div>
 			<div id="path_27" class="path">
 				<p class="kircher_hebrew">ח</p>
 				<p class="path_numbering">27</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/16_trumps_tower.gif">‎‎</p>
 			</div>			
 			<div id="path_32" class="path">
 				<p class="kircher_hebrew">ח</p>
 				<p class="path_numbering">32</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/21_trumps_world.gif">‎‎</p>
 			</div>			
 			<!-- /PATHS -->
 			
@@ -259,6 +273,7 @@
 			<div id="kether" class="gd_color"></div>
 			<div id="tiphareth" class="gd_color"></div>
 			<div id="yesod" class="gd_color"></div>
+			<div id="malkuth" class="gd_color"></div>
 			<!-- / GD Colors-->
 			
 			<!-- Three Triads-->
@@ -288,19 +303,19 @@
 			<h1 class="polarity" style="color:blue;left:-215px;">-</h1>
 			<div id="chokmah" class="sephira">
 				<p class ="number">2</p>
-				<div class="hebrew">Chokmah<br/>חכמה</div>
+				<div class="hebrew">Chokmah<br/><span class="times">חכמה</span></div>
 				<div class="english">Wisdom</div>
 				<div class="planets">Zodiac<br/>⛤</div>
 			</div>
 			<div id="chesed" class="sephira">
 				<p class ="number">4</p>
-				<div class="hebrew">Chesed<br/>חסד</div>
+				<div class="hebrew">Chesed<br/><span class="times">חסד</span></div>
 				<div class="english">Mercy</div>
 				<div class="planets">Jupiter<br/>♃</div>
 			</div>
 			<div id="netzach" class="sephira">
 				<p class ="number">7</p>
-				<div class="hebrew">Netzach<br/>נצח</div>
+				<div class="hebrew">Netzach<br/><span class="times">נצח</span></div>
 				<div class="english">Victory</div>
 				<div class="planets">Venus<br/>♀</div>
 			</div>			
@@ -309,30 +324,37 @@
 			<div id="path_11" class="path">
 				<p class="kircher_hebrew">א</p>
 				<p class="path_numbering">11</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/00_trumps_fool.gif">‎‎</p>
 			</div>			
 			<div id="path_16" class="path">
 				<p class="kircher_hebrew">ו‎</p>
 				<p class="path_numbering">16</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/05_trumps_hierophant.gif">‎‎</p>
 			</div>
 			<div id="path_20" class="path">
 				<p class="kircher_hebrew">י‎</p>
 				<p class="path_numbering">20</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/09_trumps_hermit.gif">‎‎</p>
 			</div>
 			<div id="path_22" class="path">
 				<p class="kircher_hebrew">ב‎</p>
 				<p class="path_numbering">22</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/11_trumps_justice.gif">‎‎</p>
 			</div>
 			<div id="path_24" class="path">
 				<p class="kircher_hebrew">נ‎</p>
 				<p class="path_numbering">24</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/13_trumps_death.gif">‎‎</p>
 			</div>			
 			<div id="path_28" class="path">
 				<p class="kircher_hebrew">צ‎</p>
 				<p class="path_numbering">28</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/17_trumps_star.gif">‎‎</p>
 			</div>
 			<div id="path_29" class="path">
 				<p class="kircher_hebrew">ק‎‎</p>
 				<p class="path_numbering">29</p>
+				<p><img class="tarot" src="img/tarot_riderwaite/18_trumps_moon.gif">‎‎</p>
 			</div>
 			<!-- /PATHS -->
 			
