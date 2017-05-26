@@ -57,7 +57,7 @@
 	<!-- NAVIGATION MENU -->
 	<nav>
 		<ul>
-			<li><a href="#" onclick="hide_visibility([''triads','triads_sephira',kircher_hebrew','path_numbering','man', 'pillars_bj', 'polarity', 'plane', 'hebrew', 'planets', 'english', 'flash', 'number']);">Hide All</a></li>
+			<li><a href="#" onclick="hide_visibility(['insence','triads','triads_sephira',kircher_hebrew','path_numbering','man', 'pillars_bj', 'polarity', 'plane', 'hebrew', 'planets', 'english', 'flash', 'number']);">Hide All</a></li>
 		</ul>	
 		<h3>General</h3>
 		<ul>
@@ -71,10 +71,11 @@
 		<h3>Sephiroth</h3>
 		<ul>
 			<li><a href="#" onclick="toggle_visibility('number');">Numbering</a></li>
-			<li><a href="#" onclick="toggle_visibility('hebrew');hide_visibility(['english','planets']);">Hebrew</a></li>
-			<li><a href="#" onclick="toggle_visibility('english');hide_visibility(['hebrew','planets']);">English</a></li>
-			<li><a href="#" onclick="toggle_visibility('planets');hide_visibility(['english','hebrew']);">Planets</a></li>
+			<li><a href="#" onclick="toggle_visibility('hebrew');hide_visibility(['english','planets','insence']);">Hebrew</a></li>
+			<li><a href="#" onclick="toggle_visibility('english');hide_visibility(['hebrew','planets','insence']);">English</a></li>
+			<li><a href="#" onclick="toggle_visibility('planets');hide_visibility(['english','hebrew','insence']);">Planets</a></li>
 			<li><a href="#" onclick="toggle_visibility('gd_color');">GD Colors</a></li>
+			<li><a href="#" onclick="toggle_visibility('insence');hide_visibility(['english','hebrew','planets']);">Incense</a></li>
 		</ul>		
 		<h3>Paths</h3>
 		<ul>
@@ -116,18 +117,21 @@
 				<div class="hebrew">Binah<br/><span class="times">בינה</span></div>
 				<div class="english" >Under- </br>standing</div>
 				<div class="planets">Saturn <br/>♄</div>
+				<div class="insence">Myrrh</div>
 			</div>			
 			<div id="geburah" class="sephira">
 				<p class ="number">5</p>
 				<div class="hebrew">Gevurah<br/><span class="times">גבורה</span></div>
 				<div class="english">Severity</div>
 				<div class="planets">Mars<br/>♂</div>
+				<div class="insence">Dragon's Blood</br>Basil</div>
 			</div>			
 			<div id="hod" class="sephira">
 				<p class ="number">8</p>
 				<div class="hebrew">Hod<br/><span class="times">הוד</span></div>
 				<div class="english">Splendor</div>
 				<div class="planets">Mercury<br/>☿</div>
+				<div class="insence">Lavender</div>
 			</div>	
 			<!-- / SEPHIROTH -->
 			
@@ -201,28 +205,33 @@
 				<div class="hebrew">Keter<br/><span class="times">כֶּתֶר‎</span></div>
 				<div class="english">Crown</div>
 				<div class="planets">Source<br/>✡</div>
+				<div class="insence">Sandalwood</div>
 			</div>
 			<div id="daath" class="sephira">
 				<div class="hebrew">Da'at<br/><span class="times">דעת</span></div>
 				<div class="english">Wisdom</div>
+				<div class="insence"></div>
 			</div>
 			<div id="tiphareth" class="sephira">
 				<p class ="number">6</p>
 				<div class="hebrew">Tif'eret<br/><span class="times">תפארת</span></div>
 				<div class="english">Beauty</div>
 				<div class="planets">Sun</br>☉</div>
+				<div class="insence">Frankincense<br/>Cinnamon</div>
 			</div>
 			<div id="yesod" class="sephira">
 				<p class ="number">9</p>
 				<div class="hebrew">Yesod<br/><span class="times">יסוד</span></div>
 				<div class="english">Foundation</div>
 				<div class="planets">Moon<br/>☽</div>
+				<div class="insence">Jasmine</div>
 			</div>	
 			<div id="malkuth" class="sephira">
 				<p class ="number">10</p>
 				<div class="hebrew">Malkhut<br/><span class="times">מלכות</span></div>
 				<div class="english">Kingdom</div>
 				<div class="planets">Earth<br/>⊕</div>
+				<div class="insence">Patchouli</div>
 			</div>
 			<!-- / SEPHIROTH -->
 			
@@ -306,18 +315,21 @@
 				<div class="hebrew">Chokmah<br/><span class="times">חכמה</span></div>
 				<div class="english">Wisdom</div>
 				<div class="planets">Zodiac<br/>⛤</div>
+				<div class="insence">Musk</div>
 			</div>
 			<div id="chesed" class="sephira">
 				<p class ="number">4</p>
 				<div class="hebrew">Chesed<br/><span class="times">חסד</span></div>
 				<div class="english">Mercy</div>
 				<div class="planets">Jupiter<br/>♃</div>
+				<div class="insence">Cedar</div>
 			</div>
 			<div id="netzach" class="sephira">
 				<p class ="number">7</p>
 				<div class="hebrew">Netzach<br/><span class="times">נצח</span></div>
 				<div class="english">Victory</div>
 				<div class="planets">Venus<br/>♀</div>
+				<div class="insence">Rose</div>
 			</div>			
 			
 			<!-- PATHS -->

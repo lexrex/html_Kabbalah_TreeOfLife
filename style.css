@@ -17,7 +17,7 @@ a, a:hover {
 }
 
 .sephira .times {
-		font-family: 'Times New Roman';
+	font-family: 'Times New Roman';
 	font-size: 29px;
 	line-height: .1;
 }
@@ -428,7 +428,7 @@ nav h3 {
 
 /* Layers ================= */
 
-.tarot, .gd_color, .triads_sephira, .triads, .path_numbering, .kircher_hebrew, .man, .pillars_bj , .polarity, .plane, .hebrew, .planets, .english, .flash, .number  {
+.insence, .tarot, .gd_color, .triads_sephira, .triads, .path_numbering, .kircher_hebrew, .man, .pillars_bj , .polarity, .plane, .hebrew, .planets, .english, .flash, .number  {
 	display: none;
 }
 
@@ -645,6 +645,19 @@ nav h3 {
 }
 
 /* Layers - Sephiroth ================= */
+
+.insence {
+	margin-top: 30px;
+	font-size: 12px;
+}
+
+#geburah .insence {
+	margin-top: 20px;
+}
+
+#tiphareth .insence {
+	margin-top: 25px;
+}
 
 #binah .english {
 	margin-top: 20px;
